@@ -12,7 +12,7 @@ func main() {
 		log.Println("Usage: go run " + filepath.Base(os.Args[0]) + ".go directory_name")
 		return
 	}
-	dirname := filepath.Clean(os.Args[1])
+	dirname := os.Args[1]
 
 	watcher, err := fsnotify.NewWatcher()
 	if err != nil {
